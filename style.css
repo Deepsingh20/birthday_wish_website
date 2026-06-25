@@ -1,0 +1,246 @@
+*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      }
+      
+      body{
+      font-family:Poppins,sans-serif;
+      background:#090909;
+      color:white;
+      overflow-x:hidden;
+      }
+      
+      #mainContent{
+      display:none;
+      }
+      
+      /* LOCK SCREEN */
+      
+      #lockScreen{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#17002f,#5d0038);
+      }
+      .glow-title{
+
+            font-size:4rem;
+            top:0;
+            left:50%;
+            margin:0;
+            position:absolute;
+            transform: translateX(-50%);
+            
+            color:white;
+            
+            font-family:'Great Vibes',cursive;
+            
+            animation:glow 2s infinite alternate;
+            }
+      
+      .gift-box{
+      width:300px;
+      height:300px;
+      background:#ffb6d9;
+      position:relative;
+      border-radius:20px;
+      }
+      
+      .ribbon-vertical{
+      position:absolute;
+      width:40px;
+      height:100%;
+      left:50%;
+      transform:translateX(-50%);
+      background:#ff004c;
+      }
+      
+      .ribbon-horizontal{
+      position:absolute;
+      height:40px;
+      width:100%;
+      top:50%;
+      transform:translateY(-50%);
+      background:#ff004c;
+      }
+      
+      #openBtn{
+      position:absolute;
+      bottom:-80px;
+      left:50%;
+      transform:translateX(-50%);
+      padding:15px 25px;
+      border:none;
+      border-radius:40px;
+      cursor:pointer;
+      font-size:18px;
+      }
+      
+      /* HERO */
+      
+      .hero{
+      height:100vh;
+      position:relative;
+      overflow:hidden;
+      }
+      
+      .hero-bg{
+      position:absolute;
+      top:-10%;
+      left:0;
+      width:100%;
+      height:120%;
+      background-image:url("assets/hero.jpg");
+      background-size:cover;
+      background-position:center;
+      z-index:-2;
+      }
+      
+      .overlay{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,.55);
+      z-index:-1;
+      }
+      
+      .hero-content{
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+      }
+      
+      .hero-content h1{
+      font-family:'Great Vibes';
+      font-size:90px;
+      color:hsla(355, 100%, 36%, 1);
+      }
+      
+      .hero-content h2{
+        font-family:'fantasy';
+      font-size:45px;
+      margin-bottom:25px;
+      }
+      
+      .hero-content p{
+      max-width:800px;
+      font-size:22px;
+      line-height:1.7;
+      }
+      
+      /* GALLERY */
+      
+      .gallery-section{
+      padding:100px 5%;
+      text-align:center;
+      }
+      
+      .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-top:50px;
+      }
+      
+      .card{
+      overflow:hidden;
+      border-radius:20px;
+      transition:.4s;
+      }
+      
+      .card:hover{
+      transform:
+      perspective(1000px)
+      rotateY(8deg)
+      scale(1.05);
+      }
+      
+      .card img{
+      width:100%;
+      height:450px;
+      object-fit:cover;
+      }
+      
+      /* MESSAGE */
+      
+      .message{
+      padding:100px 10%;
+      text-align:center;
+      }
+      
+      .message p{
+      max-width:900px;
+      margin:auto;
+      line-height:2;
+      font-size:20px;
+        font-family:'fantasy';
+      }
+      
+      /* CAKE */
+      
+      .cake-section{
+      padding:100px 20px;
+      text-align:center;
+      }
+      
+      #cake{
+      font-size:120px;
+      margin:30px;
+      }
+      
+      #wishBtn{
+      padding:15px 35px;
+      border:none;
+      border-radius:40px;
+      font-size:18px;
+      cursor:pointer;
+      }
+      
+      /* FIREWORK */
+      
+      .firework-section{
+      padding:100px;
+      text-align:center;
+      }
+      
+      #fireworksBtn{
+      padding:18px 35px;
+      font-size:20px;
+      cursor:pointer;
+      }
+      
+      /* REVEAL */
+      
+      .reveal{
+      opacity:0;
+      transform:translateY(100px);
+      transition:1s;
+      }
+      
+      .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+      }
+      
+      @media(max-width:768px){
+      
+      .hero-content h1{
+      font-size:60px;
+      }
+      
+      .hero-content h2{
+      font-size:30px;
+        font-color:red;
+      }
+      
+      .hero-content p{
+      font-size:18px;
+      }
+      
+      }
